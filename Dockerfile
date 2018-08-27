@@ -15,11 +15,14 @@ RUN apt-get install -yq \
     git \
     pkg-config \
     cmake \
+    doxygen \
+    graphviz \
     libboost-dev \
     libboost-filesystem-dev \
     libboost-system-dev \
     libboost-test-dev \
     libboost-thread-dev \
+    libgtest-dev \
     libjpeg-dev \
     liblzma-dev \
     libpng12-dev
