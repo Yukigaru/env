@@ -8,6 +8,15 @@ mkdir-cd() {
 alias mkcd="mkdir-cd"
 
 #
+find() {
+    sudo find . -name $1
+}
+
+gfind() {
+    sudo find / -name $1
+}
+
+#
 git-fast-push() {
     git add .
     git commit -m "$1"
