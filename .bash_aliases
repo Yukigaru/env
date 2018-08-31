@@ -11,8 +11,8 @@ mkdir-cd() {
 }
 alias mkcd="mkdir-cd"
 
-#
-find() {
+# local shortened find
+lfind() {
     if [ -z "$1" ]; then
         echo 'Wrong arguments'
         return 1
@@ -20,7 +20,12 @@ find() {
     sudo find . -name $1
 }
 
+# global shortened find
 gfind() {
+    if [ -z "$1" ]; then
+        echo 'Wrong arguments'
+        return 1
+    fi
     sudo find / -name $1
 }
 
