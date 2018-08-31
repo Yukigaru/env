@@ -1,6 +1,6 @@
 alias lsl="ls -al"
 
-#
+# mkdir & cd
 mkdir-cd() {
     if [ -z "$1" ]; then
         echo 'Wrong arguments'
