@@ -43,3 +43,5 @@ alias gitfp="git-fast-push"
 alias gitst="git status"
 
 alias glog="git log -50 --oneline --graph"
+
+alias ll="ls -al"
