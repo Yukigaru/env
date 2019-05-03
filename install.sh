@@ -5,3 +5,4 @@ ln -s -T ~/env/.zshrc ~/.zshrc
 ln -s -T ~/env/.gitconfig ~/.gitconfig
 ln -s -T ~/env/.gdbinit ~/.gdbinit
 ln -s -T ~/env/.profile ~/.profile
+ln -s -T ~/env/.config/i3/config ~/.config/i3/config
