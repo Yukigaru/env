@@ -1,5 +1,3 @@
-alias lsl="ls -al"
-
 # mkdir & cd
 mkdir-cd() {
     if [ -z "$1" ]; then
@@ -39,9 +37,7 @@ git-fast-push() {
     git push
 }
 alias gitfp="git-fast-push"
-
 alias gitst="git status"
-
-alias glog="git log -50 --oneline --graph"
-
+alias glog="git log -25 --oneline --graph"
 alias ll="ls -al"
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
