@@ -40,4 +40,4 @@ alias gitfp="git-fast-push"
 alias gitst="git status"
 alias glog="git log -25 --oneline --graph"
 alias ll="ls -al"
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
