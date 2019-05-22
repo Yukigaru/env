@@ -7,6 +7,9 @@ set tabstop=4 "show existing tab with 4 spaces width
 set shiftwidth=4 "when indenting with > use 4 spaces
 set expandtab "on pressing tab, insert 4 spaces
 
+" toggle auto-indentation on paste
+set pastetoggle=<F4>
+
 "
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
