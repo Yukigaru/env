@@ -12,17 +12,18 @@ set pastetoggle=<F4>
 
 "
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'itchyny/lightline.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'pboettch/vim-cmake-syntax'
-Plugin 'easymotion/vim-easymotion'
-
-call vundle#end()
+call plug#begin("~/.vim/plugged")
+Plug 'itchyny/lightline.vim' " bottom line
+Plug 'scrooloose/nerdtree' " fs browser
+Plug 'pboettch/vim-cmake-syntax'
+Plug 'easymotion/vim-easymotion'
+Plug 'morhetz/gruvbox' " color style
+call plug#end()
 filetype plugin indent on
+
+colorscheme gruvbox
+set background=dark
+set termguicolors
 
 " Ctrl+N - toggle NerdTree
 map <C-n> :NERDTreeToggle<CR>
