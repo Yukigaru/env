@@ -1,17 +1,34 @@
+#!/usr/bin/env bash
 RELEASE=$(lsb_release --release | cut -f2)
 
 apt update
-apt install -y curl htop jq
-apt install -y openvpn remmina
-apt install -y git cmake
-apt install -y gdb
-apt install -y ranger zsh
-apt install -y docker.io
-apt install -y clipit
-apt install -y pulseaudio volumeicon-alsa
-apt install -y i3
+
+PACKAGES=(curl
+	htop
+	jq
+	openvpn
+	remmina
+	git
+	cmake
+	gdb
+	ranger
+	zsh
+	docker.io
+	clipit
+	pulseicon
+	volumeicon-alsa
+	i3
+	python3-dev
+	python3-pip)
+
+for package in ${PACKAGES[@]}; do
+    echo "***********************"
+    apt install -y $package
+done
 
 # install vim
+add-apt-repository ppa:neovim-ppa/stable
+apt update
 apt install -y neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.config/nvim
