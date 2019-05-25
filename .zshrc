@@ -29,10 +29,18 @@ git-fast-push() {
     git push
 }
 alias gitfp="git-fast-push"
-
 alias gitst="git status"
-
 alias glog="git log -50 --oneline --graph"
 
 alias ll="ls -al"
 
+mkdir-cd() {
+    if [ -z "$1" ]; then
+        echo 'Wrong arguments'
+        return 1
+    fi
+    mkdir -p $1
+    cd $1
+}
+alias mkcd="mkdir-cd"
+alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
