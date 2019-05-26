@@ -11,10 +11,9 @@ set expandtab "on pressing tab, insert 4 spaces
 set pastetoggle=<F4>
 
 "
-set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin("~/.vim/plugged")
 Plug 'itchyny/lightline.vim' " bottom line
-Plug 'scrooloose/nerdtree' " fs browser
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " fs browser
 Plug 'pboettch/vim-cmake-syntax'
 Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox' " color style

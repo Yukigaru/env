@@ -11,4 +11,4 @@ mkdir -p ~/.config/i3
 ln -s -T ~/env/.config/i3/config ~/.config/i3/config
 
 mkdir -p ~/.config/nvim
-ln -s -T ~/env/.config/nvim/init.vim ~/.config/init.vim
+ln -s -T ~/env/.config/nvim/init.vim ~/.config/nvim/init.vim

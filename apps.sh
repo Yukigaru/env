@@ -33,7 +33,7 @@ apt install -y neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.config/nvim
 ln -s -T ~/env/.config/nvim/init.vim ~/.config/init.vim
-vim +PlugInstall +qall
+nvim +PlugInstall +qall
 
 # install clang-7
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
