@@ -32,8 +32,6 @@ alias gitfp="git-fast-push"
 alias gitst="git status"
 alias glog="git log -50 --oneline --graph"
 
-alias ll="ls -al"
-
 mkdir-cd() {
     if [ -z "$1" ]; then
         echo 'Wrong arguments'
@@ -45,3 +43,5 @@ mkdir-cd() {
 alias mkcd="mkdir-cd"
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias g="git"
+alias vim="nvim"
+alias ll="ls -al --color=auto"
