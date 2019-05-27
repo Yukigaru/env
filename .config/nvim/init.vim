@@ -12,11 +12,16 @@ set pastetoggle=<F4>
 
 "
 call plug#begin("~/.vim/plugged")
-Plug 'itchyny/lightline.vim' " bottom line
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " fs browser
-Plug 'pboettch/vim-cmake-syntax'
 Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox' " color style
+Plug 'airblade/vim-gitgutter' " shows git diff along the lines
+Plug 'vim-airline/vim-airline' " bottom line
+Plug 'vim-airline/vim-airline-themes'
+Plug 'sjl/gundo.vim' " undo tree
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
+Plug 'majutsushi/tagbar' " tags navigation
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 filetype plugin indent on
 
@@ -24,8 +29,19 @@ colorscheme gruvbox
 set background=dark
 set termguicolors
 
+" Airline
+let g:airline_theme='base16_monokai'
+
+" Undo tree
+nnoremap <F5> :GundoToggle<CR>
+
 " Ctrl+N - toggle NerdTree
 map <C-n> :NERDTreeToggle<CR>
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" Custom shortcuts
 inoremap <C-s> <esc>:w<cr>                 " save files
 nnoremap <C-s> :w<cr>
 inoremap <C-d> <esc>:wq!<cr>               " save and exit
