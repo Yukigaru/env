@@ -4,8 +4,9 @@
 [pull]
     rebase = true
 [alias]
-    st = status
-    br = branch
+    s = status
+    b = branch
     c = commit
     p = pull
     a = add
+
