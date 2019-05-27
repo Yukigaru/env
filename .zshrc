@@ -44,3 +44,4 @@ mkdir-cd() {
 }
 alias mkcd="mkdir-cd"
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias g="git"
