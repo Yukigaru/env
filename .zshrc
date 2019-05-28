@@ -17,6 +17,9 @@ zstyle :compinstall filename '/home/yukigaru/.zshrc'
 autoload -Uz compinit
 compinit
 
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+
 setopt menucomplete
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
 
