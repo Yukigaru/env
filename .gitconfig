@@ -5,6 +5,7 @@
     rebase = true
 [alias]
     s = status
+    l = log --oneline --graph
     b = branch
     c = commit
     p = pull
