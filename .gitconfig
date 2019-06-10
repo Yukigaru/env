@@ -9,4 +9,5 @@
     c = commit
     p = pull
     a = add
+    cp = cherry-pick
 
