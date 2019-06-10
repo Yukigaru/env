@@ -10,6 +10,9 @@ set expandtab "on pressing tab, insert 4 spaces
 " toggle auto-indentation on paste
 set pastetoggle=<F4>
 
+" mouse support
+set mouse=a
+
 "
 call plug#begin("~/.vim/plugged")
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " fs browser
