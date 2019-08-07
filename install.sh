@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
+mkdir backups
+mv ~/.bash_aliases ./backups/ || true
+mv ~/.zshrc ./backups/ || true
+mv ~/.gitconfig ./backups/ || true
+mv ~/.profile ./backups/ || true
+mv ~/.gdbinit ./backups/ || true
+mv ~/.config/i3/config ./backups/ || true
+mv ~/.config/nvim/init.vim ./backups/ || true
+
+
 ln -s -T ~/env/.bash_aliases ~/.bash_aliases
 ln -s -T ~/env/.zshrc ~/.zshrc
 ln -s -T ~/env/.gitconfig ~/.gitconfig
