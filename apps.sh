@@ -32,6 +32,7 @@ apt update
 apt install -y neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.config/nvim
+rm ~/.config/init.vim.backup && mv ~/.config/init.vim ~/.config/init.vim.backup
 ln -s -T ~/env/.config/nvim/init.vim ~/.config/init.vim
 nvim +PlugInstall +qall
 
