@@ -10,6 +10,7 @@ PACKAGES=(curl
 	openvpn
 	remmina
 	git
+        g++
 	cmake
 	gdb
 	hexedit
