@@ -7,25 +7,30 @@ set tabstop=4 "show existing tab with 4 spaces width
 set shiftwidth=4 "when indenting with > use 4 spaces
 set expandtab "on pressing tab, insert 4 spaces
 
+set number "add line numbers
+set hlsearch "highlight search results
+
 " toggle auto-indentation on paste
 set pastetoggle=<F4>
 
 " mouse support
 set mouse=a
 
-"
-call plug#begin("~/.vim/plugged")
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " fs browser
-Plug 'easymotion/vim-easymotion'
-Plug 'morhetz/gruvbox' " color style
-Plug 'airblade/vim-gitgutter' " shows git diff along the lines
-Plug 'vim-airline/vim-airline' " bottom line
-Plug 'vim-airline/vim-airline-themes'
-Plug 'sjl/gundo.vim' " undo tree
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
-Plug 'majutsushi/tagbar' " tags navigation
-Plug 'terryma/vim-multiple-cursors'
-call plug#end()
+" for Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin("~/.vim/bundle")
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " fs browser
+Plugin 'easymotion/vim-easymotion'
+Plugin 'morhetz/gruvbox' " color style
+Plugin 'airblade/vim-gitgutter' " shows git diff along the lines
+Plugin 'vim-airline/vim-airline' " bottom line
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'sjl/gundo.vim' " undo tree
+Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
+Plugin 'majutsushi/tagbar' " tags navigation
+Plugin 'terryma/vim-multiple-cursors'
+call vundle#end()
 filetype plugin indent on
 
 colorscheme gruvbox
