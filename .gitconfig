@@ -5,6 +5,7 @@
     rebase = true
 [alias]
     s = status
+    d = diff
     l = log --oneline --graph
     b = branch
     c = commit
