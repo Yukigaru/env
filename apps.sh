@@ -4,6 +4,7 @@ RELEASE=$(lsb_release --release | cut -f2)
 apt update
 
 PACKAGES=(curl
+	wget
 	htop
 	jq
 	openvpn
@@ -11,7 +12,9 @@ PACKAGES=(curl
 	git
 	cmake
 	gdb
+	hexedit
 	ranger
+	tmux
 	zsh
 	docker.io
 	clipit
