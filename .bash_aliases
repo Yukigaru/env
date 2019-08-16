@@ -41,3 +41,4 @@ alias gitst="git status"
 alias glog="git log -25 --oneline --graph"
 alias ll="ls -al"
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias g="git"

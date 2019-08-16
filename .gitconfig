@@ -1,6 +1,6 @@
 [user]
-	name = Alexander Garustovich
-	email = yukigaru@gmail.com
+    name = Alexander Garustovich
+    email = yukigaru@gmail.com
 [pull]
     rebase = true
 [alias]
