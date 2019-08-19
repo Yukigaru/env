@@ -10,6 +10,8 @@
     b = branch
     c = commit
     p = pull
+    ps = push
     a = add
     cp = cherry-pick
+    rb = rebase
 
