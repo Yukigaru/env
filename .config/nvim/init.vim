@@ -58,5 +58,5 @@ inoremap <C-q> <esc>:qa!<cr>               " quit discarding changes
 nnoremap <C-q> :qa!<cr>
 
 " Swap/reorder lines
-:nnoremap <C-Up> <Up>"add"ap<Up>
-:nnoremap <C-Down> "add"ap
+:nnoremap <C-S-Up> <Up>"add"ap<Up>
+:nnoremap <C-S-Down> "add"ap
