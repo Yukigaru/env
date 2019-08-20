@@ -9,6 +9,8 @@
     l = log --oneline --graph
     b = branch
     c = commit
+    ch = checkout
+    f = fetch
     p = pull
     ps = push
     a = add
