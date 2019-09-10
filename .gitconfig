@@ -5,8 +5,9 @@
     rebase = true
 [alias]
     s = status
+    sh = show
     d = diff
-    l = log --oneline --graph
+    l = log --graph -30 --pretty='format:%C(bold blue)%h%Creset %s %C(bold blue)(%an)%Creset'
     b = branch
     c = commit
     ch = checkout
