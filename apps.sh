@@ -10,14 +10,13 @@ PACKAGES=(curl
 	openvpn
 	remmina
 	git
-        g++
+    g++
 	cmake
 	gdb
 	hexedit
 	ranger
 	tmux
 	zsh
-	docker.io
 	clipit
 	pulseicon
 	volumeicon-alsa
@@ -37,8 +36,9 @@ apt install -y neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.config/nvim
 rm ~/.config/init.vim.backup && mv ~/.config/init.vim ~/.config/init.vim.backup
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ln -s -T ~/env/.config/nvim/init.vim ~/.config/init.vim
-nvim +PlugInstall +qall
+nvim +PluginInstall +qall
 
 # install clang-7
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
