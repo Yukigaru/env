@@ -9,6 +9,7 @@ mv ~/.tmux.confg ./backups/ || true
 mv ~/.config/i3/config ./backups/ || true
 mv ~/.config/nvim/init.vim ./backups/ || true
 mv ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings ./backups/ || true
+mv ~/.imwheelrc ./backups/ || true
 
 ln -s -T ~/env/.bash_aliases ~/.bash_aliases
 ln -s -T ~/env/.zshrc ~/.zshrc
@@ -27,3 +28,5 @@ ln -s -T ~/env/.config/nvim/init.vim ~/.config/nvim/init.vim
 
 mkdir -p ~/.config/sublime-text-3/Packages/User
 ln -s -T ~/env/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+
+ln -s -T ~/env/.imwheelrc ~/.imwheelrc
