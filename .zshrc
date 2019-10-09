@@ -53,7 +53,7 @@ mkdir-cd() {
 
 cd-ls() {
     cd $1
-    ll
+    ls -al --color=auto
 }
 
 alias c="cd-ls"
