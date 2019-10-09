@@ -4,7 +4,7 @@ set laststatus=2
 
 " tab -> 4 spaces
 set tabstop=4 "show existing tab with 4 spaces width
-set shiftwidth=4 "when indenting with > use 4 spaces
+set shiftwidth=1 "when indenting with > use 1 space
 set expandtab "on pressing tab, insert 4 spaces
 
 set number "add line numbers
