@@ -8,6 +8,9 @@ set shiftwidth=4 "when indenting with > use 4 spaces
 set expandtab "on pressing tab, insert 4 spaces
 
 set number "add line numbers
+
+set nowrap "don't wrap long lines
+
 set hlsearch "highlight search results
 
 " toggle auto-indentation on paste
@@ -28,7 +31,7 @@ Plugin 'vim-airline/vim-airline' " bottom line
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/gundo.vim' " undo tree
 Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
-Plugin 'majutsushi/tagbar' " tags navigation
+" Plugin 'majutsushi/tagbar' " tags navigation
 Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()
 filetype plugin indent on
