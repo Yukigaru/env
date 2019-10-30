@@ -7,7 +7,7 @@
     s = status
     sh = show
     d = diff
-    l = log --graph -30 --pretty='format:%C(bold blue)%h%Creset %s %C(bold blue)(%an)%Creset'
+    l = log --graph -20 --pretty='format:%C(bold blue)%h%Creset %s %C(bold blue)(%an)%Creset'
     b = branch
     c = commit
     ch = checkout
@@ -18,7 +18,10 @@
     cp = cherry-pick
     rb = rebase
     r = reset
+    sm = submodule
 [core]
     editor = nvim
 [merge]
     tool = meld
+[push]
+    default = simple

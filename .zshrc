@@ -58,7 +58,7 @@ cd-ls() {
 
 alias c="cd-ls"
 alias mkcd="mkdir-cd"
-alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias r='ranger --choosedir=$HOME/.cache/.rangerdir; LASTDIR=`cat $HOME/.cache/.rangerdir`; cd "$LASTDIR"'
 alias g="git"
 alias vim="nvim"
 alias ll="ls -al --color=auto"
