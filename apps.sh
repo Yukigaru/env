@@ -4,25 +4,27 @@ RELEASE=$(lsb_release --release | cut -f2)
 apt update
 
 PACKAGES=(curl
-	wget
-	htop
-	jq
-	openvpn
-	remmina
-	git
+    wget
+    htop
+    jq
+    openvpn
+    remmina
+    git
     g++
-	cmake
-	gdb
-	hexedit
-	ranger
-	tmux
-	zsh
-	clipit
-	pulseicon
-	volumeicon-alsa
-	i3
-	python3-dev
-	python3-pip)
+    cmake
+    gdb
+    hexedit
+    mc
+    tmux
+    zsh
+    clipit
+    pulseicon
+    volumeicon-alsa
+    i3
+    xclip
+    xscreensaver
+    python3-dev
+    python3-pip)
 
 for package in ${PACKAGES[@]}; do
     echo "***********************"
