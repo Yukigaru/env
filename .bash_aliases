@@ -43,3 +43,4 @@ alias ll="ls -al"
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias g="git"
 alias vim="nvim"
+alias setclip="xclip -selection c" # using: echo "abc" | setclip
