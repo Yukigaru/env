@@ -143,5 +143,6 @@ exec --no-startup-id clipit
 # Xscreensaver
 exec xscreensaver -no-splash
 
-
+# Flameshot
+exec flameshot
 
