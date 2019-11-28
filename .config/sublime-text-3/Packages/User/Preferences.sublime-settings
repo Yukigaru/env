@@ -1,0 +1,14 @@
+{
+	"font_size": 12,
+	"draw_indent_guides": false,
+	"save_on_focus_lost": false,
+
+    // Save via writing to an alternate file, and then renaming it over the original file.
+    "atomic_save": false,
+
+    "auto_complete": false,
+
+    "highlight_modified_tabs": true,
+
+    "show_encoding": true
+}
