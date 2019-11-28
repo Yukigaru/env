@@ -131,18 +131,11 @@ bar {
 # Languages: US, RU
 exec_always "setxkbmap -layout us,ru -variant ,, -option grp:alt_shift_toggle,grp_led:scroll"
 
-# Audio
 exec --no-startup-id volumeicon
-
-# Brightness
 exec --no-startup-id /opt/extras.ubuntu.com/indicator-brightness/indicator-brightness
-
-# ClipIt
 exec --no-startup-id clipit
-
-# Xscreensaver
 exec xscreensaver -no-splash
+exec --no-startup-id flameshot
+exec --no-startup-id safeeyes
 
-# Flameshot
-exec flameshot
 
