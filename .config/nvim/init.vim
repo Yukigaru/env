@@ -27,15 +27,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin("~/.vim/bundle")
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " fs browser
-Plugin 'easymotion/vim-easymotion'
+" Plugin 'easymotion/vim-easymotion'
 Plugin 'morhetz/gruvbox' " color style
 Plugin 'airblade/vim-gitgutter' " shows git diff along the lines
 Plugin 'vim-airline/vim-airline' " bottom line
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/gundo.vim' " undo tree
-Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
-" Plugin 'majutsushi/tagbar' " tags navigation
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
+"Plugin 'majutsushi/tagbar' " tags navigation
+"Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()
 filetype plugin indent on
 
@@ -66,3 +66,13 @@ nnoremap <C-q> :qa!<cr>
 " Swap/reorder lines
 nnoremap <C-S-Up> <Up>"add"ap<Up>
 nnoremap <C-S-Down> "add"ap
+
+" Comfortable Page Up/Down behavior (go until start/end of file)
+nnoremap <silent> <PageUp> <C-U><C-U>
+vnoremap <silent> <PageUp> <C-U><C-U>
+inoremap <silent> <PageUp> <C-\><C-O><C-U><C-\><C-O><C-U>
+
+nnoremap <silent> <PageDown> <C-D><C-D>
+vnoremap <silent> <PageDown> <C-D><C-D>
+inoremap <silent> <PageDown> <C-\><C-O><C-D><C-\><C-O><C-D>
+
