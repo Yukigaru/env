@@ -1,6 +1,6 @@
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=60000
+SAVEHIST=60000
 
 setopt notify
 setopt autocd
@@ -63,3 +63,4 @@ alias g="git"
 alias vim="nvim"
 alias ll="ls -al --color=auto"
 alias setclip="xclip -selection c" # using: echo "abc" | setclip
+alias tailf="tail -f"
