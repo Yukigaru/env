@@ -5,6 +5,7 @@ SAVEHIST=60000
 setopt notify
 setopt autocd
 setopt extendedglob
+setopt globdots # add .dot files to completion
 
 setopt HIST_IGNORE_DUPS # Ignore duplicate lines in History
 
