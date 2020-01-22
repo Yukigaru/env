@@ -120,7 +120,19 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+mode "move-floats" {
+        bindsym Left move left
+        bindsym Right move right
+        bindsym Up move up
+        bindsym Down move down
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
 bindsym $mod+r mode "resize"
+bindsym $mod+m mode "move-floats" focus floating
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
