@@ -8,10 +8,11 @@ set shiftwidth=1 "when indenting with > use 1 space
 set expandtab "on pressing tab, insert 4 spaces
 
 set number "add line numbers
-
 set nowrap "don't wrap long lines
 
 set hlsearch "highlight search results
+
+set clipboard+=unnamedplus
 
 " toggle auto-indentation on paste
 set pastetoggle=<F4>
