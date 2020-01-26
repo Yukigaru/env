@@ -62,6 +62,8 @@ alias mkcd="mkdir-cd"
 alias r='ranger --choosedir=$HOME/.cache/.rangerdir; LASTDIR=`cat $HOME/.cache/.rangerdir`; cd "$LASTDIR"'
 alias g="git"
 alias vim="nvim"
+alias v="nvim"
 alias ll="ls -al --color=auto"
+alias l=ll
 alias setclip="xclip -selection c" # using: echo "abc" | setclip
 alias tailf="tail -f"
