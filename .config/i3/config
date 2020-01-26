@@ -156,3 +156,6 @@ exec --no-startup-id safeeyes
 exec --no-startup-id imwheel
 
 exec --no-startup-id xset r rate 220 30 # set key repeat reate 30ms after delay of 220ms
+
+# Imwheel
+exec --no-startup-id imwheel
