@@ -67,3 +67,5 @@ alias ll="ls -al --color=auto"
 alias l=ll
 alias setclip="xclip -selection c" # using: echo "abc" | setclip
 alias tailf="tail -f"
+
+source .localvars
