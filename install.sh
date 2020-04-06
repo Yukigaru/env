@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-mkdir backups
+mkdir -p backups
+touch ~/.localvars
+
 mv ~/.bash_aliases ./backups/ || true
 mv ~/.zshrc ./backups/ || true
 mv ~/.gitconfig ./backups/ || true
