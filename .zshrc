@@ -68,4 +68,31 @@ alias l=ll
 alias setclip="xclip -selection c" # using: echo "abc" | setclip
 alias tailf="tail -f"
 
+
+# Alt+Backspace
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir
+
+# Alt+Left
+backward-word-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-word
+}
+zle -N backward-word-dir
+bindkey "^[[1;3C" forward-word-dir
+
+# Alt+Right
+forward-word-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle forward-word
+}
+zle -N forward-word-dir
+bindkey "^[[1;3D" backward-word-dir
+
+# Alt+D - delete until end of line
+
 source .localvars
