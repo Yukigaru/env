@@ -4,8 +4,18 @@ set laststatus=2
 
 " tab -> 4 spaces
 set tabstop=4 "show existing tab with 4 spaces width
-set shiftwidth=1 "when indenting with > use 1 space
+set softtabstop=4
+set shiftwidth=4 "when indenting with > use 1 space
 set expandtab "on pressing tab, insert 4 spaces
+
+set scrolloff=5 "minimal number of screen lines to keep above and below the cursor.
+set ttimeoutlen=50  "make Esc work faster
+set autoread "reload unchanged buffers when file changed outside vim
+set cursorline "higlight current line
+
+set nocindent
+set nosmartindent
+set noautoindent "disable auto-indent
 
 set number "add line numbers
 set nowrap "don't wrap long lines
@@ -28,12 +38,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin("~/.vim/bundle")
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " fs browser
+Plugin 'preservim/nerdcommenter'
 " Plugin 'easymotion/vim-easymotion'
 Plugin 'morhetz/gruvbox' " color style
 Plugin 'airblade/vim-gitgutter' " shows git diff along the lines
 Plugin 'vim-airline/vim-airline' " bottom line
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/gundo.vim' " undo tree
+Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
 "Plugin 'majutsushi/tagbar' " tags navigation
 "Plugin 'terryma/vim-multiple-cursors'
@@ -53,8 +65,18 @@ nnoremap <F5> :GundoToggle<CR>
 " Ctrl+N - toggle NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
+" Open the project tree and expose current file in the nerdtree with Ctrl-\
+nnoremap <silent> <C-\> :NERDTreeFind<CR>
+
+" Jump to next split
+nnoremap <Leader>w <C-w>w
+
+"\c<space> - toggle comment
+"\cc - comment
+"Ctrl+v - block selection
+
 " Tagbar
-nmap <F8> :TagbarToggle<CR>
+"nmap <F8> :TagbarToggle<CR>
 
 " Custom shortcuts
 inoremap <C-s> <esc>:w<cr>                 " save files
