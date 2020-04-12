@@ -6,20 +6,16 @@ apt update
 PACKAGES=(curl
     wget
     htop
-    jq
     openvpn
     remmina
     git
     g++
     cmake
     gdb
-    hexedit
     mc
     tmux
     zsh
     clipit
-    pulseicon
-    volumeicon-alsa
     i3
     xclip
     xscreensaver
@@ -31,13 +27,14 @@ for package in ${PACKAGES[@]}; do
     apt install -y $package
 done
 
-# install vim
+# install neovim
 add-apt-repository ppa:neovim-ppa/stable
 apt update
 apt install -y neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.config/nvim
-rm ~/.config/init.vim.backup && mv ~/.config/init.vim ~/.config/init.vim.backup
+rm ~/.config/init.vim.backup || true
+mv ~/.config/init.vim ~/.config/init.vim.backup
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ln -s -T ~/env/.config/nvim/init.vim ~/.config/init.vim
 nvim +PluginInstall +qall

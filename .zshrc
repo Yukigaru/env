@@ -95,4 +95,4 @@ bindkey "^[[1;3D" backward-word-dir
 
 # Alt+D - delete until end of line
 
-source .localvars
+source ~/.localvars
