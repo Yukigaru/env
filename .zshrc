@@ -67,7 +67,7 @@ alias ll="ls -al --color=auto"
 alias l=ll
 alias setclip="xclip -selection c" # using: echo "abc" | setclip
 alias tailf="tail -f"
-
+alias open="xdg-open"
 
 # Alt+Backspace
 backward-kill-dir () {
