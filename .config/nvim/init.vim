@@ -24,7 +24,17 @@ set whichwrap+=<,>,h,l,[,] "left-right wraps the cursor
 
 set hlsearch "highlight search results
 
-set clipboard+=unnamedplus
+" using the system clipboard
+function! ClipboardYank()
+  call system('xclip -i -selection clipboard', @@)
+endfunction
+function! ClipboardPaste()
+  let @@ = system('xclip -o -selection clipboard')
+endfunction
+
+vnoremap <silent> y y:call ClipboardYank()<cr>
+vnoremap <silent> d d:call ClipboardYank()<cr>
+nnoremap <silent> p :call ClipboardPaste()<cr>p
 
 set ttyfast " faster redrawing
 
