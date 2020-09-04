@@ -20,9 +20,13 @@ set noautoindent "disable auto-indent
 set number "add line numbers
 set nowrap "don't wrap long lines
 
+set whichwrap+=<,>,h,l,[,] "left-right wraps the cursor
+
 set hlsearch "highlight search results
 
 set clipboard+=unnamedplus
+
+set ttyfast " faster redrawing
 
 " toggle auto-indentation on paste
 set pastetoggle=<F4>
@@ -45,9 +49,9 @@ Plugin 'airblade/vim-gitgutter' " shows git diff along the lines
 Plugin 'vim-airline/vim-airline' " bottom line
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/gundo.vim' " undo tree
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
+Plugin 'neoclide/coc.nvim', {'branch': 'release'} " auto-completion, gd - go-to definition
 "Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
-"Plugin 'majutsushi/tagbar' " tags navigation
 "Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()
 filetype plugin indent on
@@ -55,6 +59,26 @@ filetype plugin indent on
 colorscheme gruvbox
 set background=dark
 set termguicolors
+
+" Coc
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 " Airline
 let g:airline_theme='base16_monokai'
@@ -99,3 +123,20 @@ nnoremap <silent> <PageDown> <C-D><C-D>
 vnoremap <silent> <PageDown> <C-D><C-D>
 inoremap <silent> <PageDown> <C-\><C-O><C-D><C-\><C-O><C-D>
 
+" Coc
+" go to definition
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>rn <Plug>(coc-rename)
+"nmap <leader>cf <Plug>(coc-fix-current)
+
+"" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Show all diagnostics.
+nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>

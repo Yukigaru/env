@@ -1,0 +1,29 @@
+{
+    "python.jediEnabled": true,
+    "python.autoComplete.extraPaths": ["./"],
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "suggest.minTriggerInputLength": 2,
+    "suggest.detailField": "menu",
+    "suggest.snippetIndicator": "✰",
+    "diagnostic.warningSign": "⚠",
+    "diagnostic.errorSign": "✗",
+    "coc.preferences.diagnostic.displayByAle": true,
+    "list.insertMappings": {
+        "<C-c>": "do:exit"
+    },
+    "languageserver": {
+        "clangd": {
+            "command": "/usr/local/clang_10.0.0/bin/clangd",
+            "args": ["--background-index"],
+            "rootPatterns": ["compile_flags.txt", "compile_commands.json", "b", "build"],
+            "filetypes": ["c", "cc", "cpp", "objc", "objcpp"]
+        },
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod"],
+            "filetypes": ["go"]
+        }
+    }
+}
