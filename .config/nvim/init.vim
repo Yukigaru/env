@@ -61,6 +61,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/gundo.vim' " undo tree
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
 Plugin 'neoclide/coc.nvim', {'branch': 'release'} " auto-completion, gd - go-to definition
+Plugin 'rhysd/vim-clang-format'
 "Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
 "Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()
@@ -119,6 +120,8 @@ inoremap <C-d> <esc>:wq!<cr>               " save and exit
 nnoremap <C-d> :wq!<cr>
 inoremap <C-q> <esc>:qa!<cr>               " quit discarding changes
 nnoremap <C-q> :qa!<cr>
+
+nnoremap <C-f> :ClangFormat<cr>
 
 " Swap/reorder lines
 nnoremap <C-S-Up> <Up>"add"ap<Up>
