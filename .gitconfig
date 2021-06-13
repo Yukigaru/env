@@ -8,7 +8,7 @@
     sh = show
     d = diff
     l = log --graph -20 --pretty='format:%C(bold blue)%h%Creset %s %C(bold blue)(%an)%Creset'
-    b = branch
+    b = branch --sort=-committerdate --format '%(color:bold green)%(refname:short) %(color:reset)%(contents:subject) %(color:bold blue)%(committername)'
     c = commit
     ch = checkout
     f = fetch
