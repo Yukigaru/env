@@ -1,7 +1,8 @@
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Control
+# Windows key
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -11,7 +12,7 @@ font pango:monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+F1 exec google-chrome
 # kill focused window
 bindsym $mod+q kill
@@ -146,8 +147,5 @@ exec --no-startup-id gsettings set org.gnome.desktop.background show-desktop-ico
 
 # Languages: US, RU
 exec_always "setxkbmap -layout us,ru -variant ,, -option grp:alt_shift_toggle,grp_led:scroll"
-
-exec --no-startup-id clipit
-exec --no-startup-id imwheel
 
 exec --no-startup-id xset r rate 260 30 # set key repeat rate, every 30ms after 260ms
