@@ -6,6 +6,7 @@ setopt notify
 setopt autocd
 setopt extendedglob
 setopt globdots # add .dot files to completion
+#setopt rmstarsilent # do not ask for comfirmation to rm *
 
 setopt HIST_IGNORE_DUPS # Ignore duplicate lines in History
 
@@ -58,7 +59,6 @@ cd-ls() {
 
 alias c="cd-ls"
 alias mkcd="mkdir-cd"
-alias r='ranger --choosedir=$HOME/.cache/.rangerdir; LASTDIR=`cat $HOME/.cache/.rangerdir`; cd "$LASTDIR"'
 alias g="git"
 alias vim="nvim"
 alias v="nvim"
