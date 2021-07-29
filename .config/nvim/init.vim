@@ -22,6 +22,9 @@ set nowrap "don't wrap long lines
 
 set whichwrap+=<,>,h,l,[,] "left-right wraps the cursor
 
+"backspace to always remove only 1 character, not more
+imap <BS> <Left><Del>
+
 set hlsearch "highlight search results
 
 " using the system clipboard
