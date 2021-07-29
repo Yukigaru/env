@@ -62,7 +62,7 @@ Plugin 'sjl/gundo.vim' " undo tree
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
 Plugin 'neoclide/coc.nvim', {'branch': 'release'} " auto-completion, gd - go-to definition
 Plugin 'rhysd/vim-clang-format'
-"Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
+Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
 "Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()
 filetype plugin indent on
