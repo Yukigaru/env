@@ -5,7 +5,7 @@ set laststatus=2
 " tab -> 4 spaces
 set tabstop=4 "show existing tab with 4 spaces width
 set softtabstop=4
-set shiftwidth=4 "when indenting with > use 1 space
+set shiftwidth=2 "when indenting with > use 2 spaces
 set expandtab "on pressing tab, insert 4 spaces
 
 set scrolloff=5 "minimal number of screen lines to keep above and below the cursor.
