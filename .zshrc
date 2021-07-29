@@ -94,4 +94,9 @@ bindkey "^[[1;3D" backward-word-dir
 
 # Alt+D - delete until end of line
 
+# F2 - cd to the parent directory
+cdparent() { cd .. ; pwd ; zle reset-prompt }
+zle -N cdparent
+bindkey "^[OQ" cdparent # F2
+
 source ~/.localvars
