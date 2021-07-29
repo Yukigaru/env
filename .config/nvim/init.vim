@@ -141,6 +141,7 @@ inoremap <silent> <PageDown> <C-\><C-O><C-D><C-\><C-O><C-D>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+"note: <leader> is \ by default
 nmap <leader>rn <Plug>(coc-rename)
 "nmap <leader>cf <Plug>(coc-fix-current)
 
