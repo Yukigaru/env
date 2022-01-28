@@ -41,7 +41,7 @@ zstyle ':vcs_info:git:*' formats 'on branch %b'
 setopt PROMPT_SUBST
 
 PROMPT=$'\n''%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %d> '
-RPROMPT=\$vcs_info_msg_0_
+#RPROMPT=\$vcs_info_msg_0_
 
 # ALIASES
 mkdir-cd() {
