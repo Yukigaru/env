@@ -11,6 +11,7 @@
     b = branch --sort=-committerdate --format '%(color:bold green)%(refname:short) %(color:reset)%(contents:subject) %(color:bold blue)%(committername)'
     c = commit
     ch = checkout
+    cl = clone
     f = fetch
     p = pull
     ps = push
@@ -21,7 +22,5 @@
     sm = submodule
 [core]
     editor = nvim
-[merge]
-    tool = meld
 [push]
     default = simple
