@@ -12,7 +12,6 @@ PACKAGES=(curl
     g++
     cmake
     gdb
-    mc
     tmux
     zsh
     clipit
