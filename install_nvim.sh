@@ -9,7 +9,7 @@ fi
 if [ -f "/etc/arch-release" ]; then
     sudo pacman -Syy && pacman -S neovim
 elif [ -f "/etc/lsb-release" ]; then
-    sudo add-apt-repository ppa:neovim-ppa/stable
+    sudo add-apt-repository -y ppa:neovim-ppa/stable
     sudo apt update && sudo apt install -y neovim
 fi
 
