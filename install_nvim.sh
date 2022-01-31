@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 set -eu -o pipefail
 
 if [ "$EUID" -eq 0 ]; then
@@ -7,7 +8,7 @@ if [ "$EUID" -eq 0 ]; then
 fi
 
 if [ -f "/etc/arch-release" ]; then
-    sudo pacman -Syy && pacman -S neovim
+    sudo pacman -Syy && sudo pacman -S --noconfirm neovim
 elif [ -f "/etc/lsb-release" ]; then
     sudo add-apt-repository -y ppa:neovim-ppa/stable
     sudo apt update && sudo apt install -y neovim
