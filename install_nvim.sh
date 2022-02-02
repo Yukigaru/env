@@ -18,20 +18,13 @@ fi
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.config/nvim
 
-if [ -f "~/.config/init.vim/backup" ]; then
-    rm ~/.config/init.vim.backup || true
-fi
-if [ -f "~/.config/init.vim" ]; then
-    mv ~/.config/init.vim ~/.config/init.vim.backup
-fi
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-ln -s -T ~/env/.config/nvim/init.vim ~/.config/init.vim
+
+[ ! -f ~/.config/nvim/init.vim ] && ln -s -T ~/env/.config/nvim/init.vim ~/.config/nvim/init.vim
 
 USER=$(whoami)
 sudo chown $USER:$USER -R ~/.local/share/nvim
 
 echo "Installing plugins"
 nvim +PluginInstall +qall
-
-
 
