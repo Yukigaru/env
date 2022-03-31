@@ -66,6 +66,7 @@ Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
 Plugin 'neoclide/coc.nvim', {'branch': 'release'} " auto-completion, gd - go-to definition
 Plugin 'rhysd/vim-clang-format'
 Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go-lang support
+Plugin 'nestorsalceda/vim-strip-trailing-whitespaces'
 "Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()
 filetype plugin indent on
