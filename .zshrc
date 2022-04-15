@@ -36,7 +36,7 @@ precmd() { vcs_info }
 
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats 'on branch %b'
- 
+
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
 
@@ -67,6 +67,9 @@ alias l=ll
 alias setclip="xclip -selection c" # using: echo "abc" | setclip
 alias tailf="tail -f"
 alias open="xdg-open"
+alias sc="systemctl"
+alias jc="journalctl"
+alias sudo='sudo ' # so that all aliases above also expanded via `sudo cmd`
 
 # Alt+Backspace
 backward-kill-dir () {
