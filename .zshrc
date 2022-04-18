@@ -71,6 +71,9 @@ alias sc="systemctl"
 alias jc="journalctl"
 alias sudo='sudo ' # so that all aliases above also expanded via `sudo cmd`
 
+echo "Remember aliases:"
+echo "jc - journalctl, sc - systemctl, c - cd, v - vim, mkcd, F2 - jump to a parent dir, Alt+D - delete until end of the line"
+
 # Alt+Backspace
 backward-kill-dir () {
     local WORDCHARS=${WORDCHARS/\/}
