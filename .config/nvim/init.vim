@@ -17,7 +17,7 @@ set nocindent
 set nosmartindent
 set noautoindent "disable auto-indent
 
-set number "add line numbers
+"set number "add line numbers
 set nowrap "don't wrap long lines
 
 set whichwrap+=<,>,h,l,[,] "left-right wraps the cursor
@@ -73,7 +73,7 @@ filetype plugin indent on
 
 colorscheme gruvbox
 set background=dark
-set termguicolors
+set notermguicolors " termguicolors enables 24-bit RGB color, but it doesn't work in mosh
 
 " Coc
 " TextEdit might fail if hidden is not set.
