@@ -32,3 +32,7 @@ ln -f -s -T ~/env/.config/nvim/init.vim ~/.config/nvim/init.vim
 mkdir -p ~/.config/sublime-text-3/Packages/User
 mv ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s -T ~/env/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+
+mkdir -p ~/.config/ranger
+mv ~/.config/i3/config ${BACKUP_DIR} 2>/dev/null || true
+ln -f -s -T ~/env/.config/ranger/rc.conf ~/.config/ranger/rc.conf

@@ -15,10 +15,11 @@
     },
     "languageserver": {
         "clangd": {
-            "command": "/usr/local/clang_10.0.0/bin/clangd",
+            "command": "/usr/lib/llvm-13/bin/clangd",
             "args": ["--background-index"],
             "rootPatterns": ["compile_flags.txt", "compile_commands.json", "b", "build"],
-            "filetypes": ["c", "cc", "cpp", "objc", "objcpp"]
+            "filetypes": ["c", "cc", "cpp", "objc", "objcpp"],
+            "trace.server": "verbose"
         },
         "golang": {
             "command": "gopls",
