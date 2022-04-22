@@ -63,16 +63,18 @@ alias g="git"
 alias vim="nvim"
 alias v="nvim"
 alias ll="ls -al --color=auto"
-alias l=ll
+alias l="ll"
+alias r="ranger"
 alias setclip="xclip -selection c" # using: echo "abc" | setclip
-alias tailf="tail -f"
 alias open="xdg-open"
 alias sc="systemctl"
 alias jc="journalctl"
 alias sudo='sudo ' # so that all aliases above also expanded via `sudo cmd`
 
 echo "Remember aliases:"
-echo "jc - journalctl, sc - systemctl, c - cd, v - vim, mkcd, F2 - jump to a parent dir, Alt+D - delete until end of the line"
+echo "jc - journalctl, sc - systemctl, c - cd, v - vim, mkcd, r - ranger"
+echo "F2 - jump to a parent dir, Alt+D - delete until end of the line"
+echo "g au - git add -u, g sta - git stash apply, g ds - diff --staged"
 
 # Alt+Backspace
 backward-kill-dir () {
@@ -97,8 +99,6 @@ forward-word-dir () {
 }
 zle -N forward-word-dir
 bindkey "^[[1;3D" backward-word-dir
-
-# Alt+D - delete until end of line
 
 # F2 - cd to the parent directory
 cdparent() { cd .. ; pwd ; zle reset-prompt }

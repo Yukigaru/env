@@ -7,19 +7,23 @@
     s = status
     sh = show
     d = diff
+    ds = diff --staged
     l = log --graph -20 --pretty='format:%C(bold blue)%h%Creset %s %C(bold blue)(%an)%Creset'
     b = branch --sort=-committerdate --format '%(color:bold green)%(refname:short) %(color:reset)%(contents:subject) %(color:bold blue)%(committername)'
-    c = commit
+    c = commit -m
     ch = checkout
     cl = clone
-    f = fetch
+    f = fetch --all
     p = pull
     ps = push
     a = add
+    au = add -u
     cp = cherry-pick
     rb = rebase
     r = reset
     sm = submodule
+    st = stash
+    sta = stash apply
 [core]
     editor = nvim
 [push]
