@@ -65,6 +65,7 @@ alias vim="nvim"
 alias v="nvim"
 alias ll="ls -al --color=auto"
 alias l="ll"
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias r="ranger"
 alias setclip="xclip -selection c" # using: echo "abc" | setclip
 alias open="xdg-open"
