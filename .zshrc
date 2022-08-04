@@ -115,4 +115,8 @@ cdparent() { cd .. ; pwd ; zle reset-prompt }
 zle -N cdparent
 bindkey "^[OQ" cdparent # F2
 
+
+#
+export PATH=~/.local/bin:${PATH}
+
 source ~/.localvars
