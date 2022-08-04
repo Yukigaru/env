@@ -1,8 +1,10 @@
 [user]
     name = Alexander Garustovich
     email = yukigaru@gmail.com
+
 [pull]
     rebase = true
+
 [alias]
     s = status
     sh = show
@@ -24,7 +26,22 @@
     sm = submodule
     st = stash
     sta = stash apply
+    bl = blame
+
 [core]
     editor = nvim
+
+[submodule]
+	recurse = true
+
+[color]
+    ui = true
+
 [push]
     default = simple
+
+[safe]
+	directory = /home/sergey/asianrobot
+	directory = /home/pablo/asianrobot
+	directory = /home/yura/dev/asianrobot
+	directory = /home/agarustovich/.vim/bundle/coc.nvim

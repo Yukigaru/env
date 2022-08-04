@@ -72,11 +72,18 @@ alias open="xdg-open"
 alias sc="systemctl"
 alias jc="journalctl"
 alias sudo='sudo ' # so that all aliases above also expanded via `sudo cmd`
+alias la='find -printf "%TY-%Tm-%Td %TT %p\n" | sort --numeric-sort --reverse | head -20' # top N last modified files, sorted
+alias gs='g s'
+alias gd='g d'
+alias gl='g l'
+alias ga='g a'
+alias gc='g c'
 
 echo "Remember aliases:"
 echo "jc - journalctl, sc - systemctl, c - cd, v - vim, mkcd, r - ranger"
 echo "F2 - jump to a parent dir, Alt+D - delete until end of the line"
 echo "g au - git add -u, g sta - git stash apply, g ds - diff --staged"
+echo "la - top N last modified files, sorted"
 
 # Alt+Backspace
 backward-kill-dir () {
