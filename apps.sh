@@ -14,10 +14,14 @@ PACKAGES=(curl
     gdb
     tmux
     zsh
-    clipit
+    fzf
     i3
+    conan
+    clipit
     xclip
     xscreensaver
+    silversearcher-ag
+    jq
     python3-dev
     python3-pip)
 
