@@ -1,6 +1,25 @@
 skip file bits/basic_string.h
 skip file bits/basic_string.tcc
 skip file bits/move.h
+skip file bits/unique_ptr.h
+skip file bits/shared_ptr.h
+skip file bits/shared_ptr_base.h
+skip file smart_ptr/intrusive_ptr.hpp
+skip file __memory/unique_ptr.h
+skip file __memory/compressed_pair.h
+skip file bits/stl_map.h
+skip file bits/stl_tree.h
+skip file bits/stl_vector.h
+skip file intrusive/list.hpp
+skip file detail/list_iterator.hpp
+skip file c++/11/optional
+skip file c++/11/chrono
+skip file __memory/shared_ptr.h
+skip file rapidjson/document.h
+skip file v1/vector
+
+source /home/agarustovich/libcxx-pretty-printers/src/gdbinit
+source /home/agarustovich/asianrobot/Decimal-gdb.py
 
 set confirm off
 set verbose off
