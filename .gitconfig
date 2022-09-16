@@ -28,6 +28,9 @@
     sta = stash apply
     bl = blame
 
+[diff]
+    context = 9
+
 [core]
     editor = nvim
 
