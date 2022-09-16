@@ -54,7 +54,7 @@ mkdir-cd() {
 }
 
 cd-ls() {
-    cd $1 && ls -al --color=auto
+    cd $1 && exa -al --color=auto
 }
 
 alias ls="exa"
@@ -78,6 +78,12 @@ alias gd='g d'
 alias gl='g l'
 alias ga='g a'
 alias gc='g c'
+alias gb='g b'
+alias gp='g p'
+alias gch='g ch'
+alias gsh='g sh'
+alias grb='g rb'
+alias cont='--continue'
 
 echo "Remember aliases:"
 echo "jc - journalctl, sc - systemctl, c - cd, v - vim, mkcd, r - ranger"
@@ -114,6 +120,10 @@ bindkey "^[[1;3D" backward-word-dir
 cdparent() { cd .. ; pwd ; zle reset-prompt }
 zle -N cdparent
 bindkey "^[OQ" cdparent # F2
+
+cdasianrobot() { cd ~/asianrobot ; zle reset-prompt }
+zle -N cdasianrobot
+bindkey '^[OS' cdasianrobot
 
 
 #
