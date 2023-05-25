@@ -44,7 +44,4 @@
     default = simple
 
 [safe]
-	directory = /home/sergey/asianrobot
-	directory = /home/pablo/asianrobot
-	directory = /home/yura/dev/asianrobot
 	directory = /home/agarustovich/.vim/bundle/coc.nvim
