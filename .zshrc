@@ -94,7 +94,7 @@ echo "i3: mod+shift+S - screenshot with flameshot"
 
 # Alt+Backspace
 backward-kill-dir () {
-    local WORDCHARS=${WORDCHARS/\/}
+    local WORDCHARS=${WORDCHARS}/\/
     zle backward-kill-word
 }
 zle -N backward-kill-dir
@@ -102,7 +102,7 @@ bindkey '^[^?' backward-kill-dir
 
 # Alt+Left
 backward-word-dir () {
-    local WORDCHARS=${WORDCHARS/\/}
+    local WORDCHARS=${WORDCHARS}/\/
     zle backward-word
 }
 zle -N backward-word-dir
@@ -121,12 +121,13 @@ cdparent() { cd .. ; pwd ; zle reset-prompt }
 zle -N cdparent
 bindkey "^[OQ" cdparent # F2
 
-cdasianrobot() { cd ~/asianrobot ; zle reset-prompt }
-zle -N cdasianrobot
-bindkey '^[OS' cdasianrobot
-
-
 #
 export PATH=~/.local/bin:${PATH}
 
 source ~/.localvars
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# load a zsh script specific to the hostname
+if [[ -f "$HOME/env/$(hostname -s).zsh" ]]; then
+    source "$HOME/env/$(hostname -s).zsh"
+fi
