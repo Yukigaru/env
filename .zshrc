@@ -73,6 +73,7 @@ alias sc="systemctl"
 alias jc="journalctl"
 alias sudo='sudo ' # so that all aliases above also expanded via `sudo cmd`
 alias la='find -printf "%TY-%Tm-%Td %TT %p\n" | sort --numeric-sort --reverse | head -20' # top N last modified files, sorted
+
 alias gs='g s'
 alias gd='g d'
 alias gl='g l'
@@ -83,6 +84,7 @@ alias gp='g p'
 alias gch='g ch'
 alias gsh='g sh'
 alias grb='g rb'
+alias gfix='git add -u && git commit --fixup HEAD && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash HEAD~~'
 alias cont='--continue'
 
 echo "Remember aliases:"
