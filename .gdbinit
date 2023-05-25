@@ -4,6 +4,8 @@ skip file bits/move.h
 skip file bits/unique_ptr.h
 skip file bits/shared_ptr.h
 skip file bits/shared_ptr_base.h
+skip file bits/unordered_map.h
+skip file bits/stl_deque.h
 skip file smart_ptr/intrusive_ptr.hpp
 skip file __memory/unique_ptr.h
 skip file __memory/compressed_pair.h
@@ -14,12 +16,21 @@ skip file intrusive/list.hpp
 skip file detail/list_iterator.hpp
 skip file c++/11/optional
 skip file c++/11/chrono
+skip file c++/11/string_view
+skip file bits/alloc_traits.h
 skip file __memory/shared_ptr.h
 skip file rapidjson/document.h
-skip file v1/vector
 
-source /home/agarustovich/libcxx-pretty-printers/src/gdbinit
-source /home/agarustovich/asianrobot/Decimal-gdb.py
+# libc++
+skip file v1/vector
+skip file v1/string_view
+skip file v1/string
+skip file v1/type_traits
+skip file v1/__utility/forward.h
+skip file v1/__utility/move.h
+skip file v1/__functional/invoke.h
+
+
 
 set confirm off
 set verbose off
