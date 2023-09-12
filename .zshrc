@@ -54,10 +54,9 @@ mkdir-cd() {
 }
 
 cd-ls() {
-    cd $1 && exa -al --color=auto
+    cd $1 && ls -al --color=auto
 }
 
-alias ls="exa"
 alias c="cd-ls"
 alias mkcd="mkdir-cd"
 alias g="git"
