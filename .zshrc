@@ -132,3 +132,11 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 if [[ -f "$HOME/env/$(hostname -s).zsh" ]]; then
     source "$HOME/env/$(hostname -s).zsh"
 fi
+
+# load every script in local folder
+mkdir -p ~/.zsh-local/
+
+for config_file in ~/.zsh-local/*; do
+    echo "loading ${config_file}"
+    source ${config_file}
+done
