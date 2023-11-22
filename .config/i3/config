@@ -7,6 +7,8 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 10
 
+default_border pixel 6
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
