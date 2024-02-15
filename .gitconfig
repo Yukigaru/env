@@ -10,7 +10,7 @@
     sh = show
     d = diff
     ds = diff --staged
-    l = log --graph -20 --pretty='format:%C(bold blue)%h%Creset %s %C(bold blue)(%an)%Creset'
+    l = log --graph -20 --pretty=format:\"%Cgreen%ad%Creset %C(bold blue)%h%Creset %s %C(bold blue)(%an)%Creset\" --date=format:\"%d %b\"
     b = branch --sort=-committerdate --format '%(color:bold green)%(refname:short) %(color:reset)%(contents:subject) %(color:bold blue)%(committername)'
     c = commit -m
     ch = checkout
