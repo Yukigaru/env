@@ -21,6 +21,10 @@ ln -f -s -T ~/env/.tmux.conf ~/.tmux.conf
 mv ~/.profile ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s -T ~/env/.profile ~/.profile
 
+mkdir -p ~/.config/htop
+mv ~/.config/htop/htoprc ${BACKUP_DIR} 2>/dev/null || true
+ln -f -s -T ~/env/.config/htoprc ~/.config/htop/htoprc
+
 mkdir -p ~/.config/i3
 mv ~/.config/i3/config ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s -T ~/env/.config/i3/config ~/.config/i3/config
