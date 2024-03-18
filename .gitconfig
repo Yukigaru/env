@@ -11,7 +11,7 @@
     d = diff
     ds = diff --staged
     l = log --graph -20 --pretty=format:\"%Cgreen%ad%Creset %C(bold blue)%h%Creset %s %C(bold blue)(%an)%Creset\" --date=format:\"%d %b\"
-    b = branch --sort=-committerdate --format '%(color:bold green)%(refname:short) %(color:reset)%(contents:subject) %(color:bold blue)%(committername)'
+    b = branch --sort=-committerdate --format \"%(color:bold green)%(refname:short): %(color:reset)%(committerdate:relative), %(color:bold blue)%(objectname:short)%(color:reset): %(contents:subject) %(color:bold blue)%(committername)\"
     c = commit -m
     ch = checkout
     cl = clone
