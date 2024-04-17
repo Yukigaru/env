@@ -31,11 +31,11 @@ ethernet _first_ {
 
 battery all {
         format = " %status %percentage %remaining "
-        format_down = " no battery "
+        format_down = ""
 }
 
 disk "/" {
-        format = " block %used used "
+        format = " block %used used, %free free "
 }
 
 load {
