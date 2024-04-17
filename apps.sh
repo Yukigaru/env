@@ -21,6 +21,8 @@ PACKAGES=(curl
     xclip
     xscreensaver
     silversearcher-ag
+    volumeicon-alsa
+    gxkb
     jq
     python3-dev
     python3-pip)
