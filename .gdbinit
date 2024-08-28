@@ -6,20 +6,28 @@ skip file bits/shared_ptr.h
 skip file bits/shared_ptr_base.h
 skip file bits/unordered_map.h
 skip file bits/stl_deque.h
-skip file smart_ptr/intrusive_ptr.hpp
-skip file __memory/unique_ptr.h
-skip file __memory/compressed_pair.h
+skip file bits/stl_iterator.h
+skip file bits/invoke.h
+skip file bits/alloc_traits.h
 skip file bits/stl_map.h
 skip file bits/stl_tree.h
 skip file bits/stl_vector.h
+skip file smart_ptr/intrusive_ptr.hpp
+skip file __memory/unique_ptr.h
+skip file __memory/compressed_pair.h
 skip file intrusive/list.hpp
 skip file detail/list_iterator.hpp
 skip file c++/11/optional
 skip file c++/11/chrono
 skip file c++/11/string_view
-skip file bits/alloc_traits.h
+skip file c++/12/bits/chrono.h
+skip file c++/12/functional
+skip file c++/12/string_view
 skip file __memory/shared_ptr.h
 skip file rapidjson/document.h
+skip file boost/container/vector.hpp
+skip file robin_hood.h
+
 
 # libc++
 skip file v1/vector
@@ -40,6 +48,14 @@ set history save
 # These make gdb never pause in its output
 set height 0
 set width 0
+
+
+#source /home/alex/libcxx-pretty-printers/src/gdbinit
+source /home/alex/asianrobot-local/tools/Time-gdb.py
+#source /home/alex/asianrobot-local/tools/LevelData-gdb.py
+#source /home/alex/asianrobot-local/tools/Decimal-gdb.py
+#source /home/alex/asianrobot-local/tools/UpdateId-gdb.py
+#source /home/alex/asianrobot-local/tools/IncUpdate-gdb.py
 
 # _____________breakpoint aliases_____________
 define bpl
