@@ -158,4 +158,4 @@ exec --no-startup-id flameshot
 exec --no-startup-id safeeyes
 exec --no-startup-id imwheel
 
-exec --no-startup-id xset r rate 230 40 # set key repeat rate after 230ms, 40 - speed
+exec --no-startup-id xset r rate 220 40 # (X, Y) - set key repeat rate after Xms, Y - speed
