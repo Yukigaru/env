@@ -45,3 +45,5 @@
 
 [safe]
 	directory = /home/agarustovich/.vim/bundle/coc.nvim
+[init]
+	defaultBranch = main
