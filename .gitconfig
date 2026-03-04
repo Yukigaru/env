@@ -2,6 +2,10 @@
     name = Alexander Garustovich
     email = yukigaru@gmail.com
 
+# Work email for repos under ~/work/
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig-work
+
 [pull]
     rebase = true
 
@@ -30,6 +34,13 @@
 
 [diff]
     context = 9
+    algorithm = histogram
+
+[rerere]
+    enabled = true
+
+[merge]
+    conflictstyle = zdiff3
 
 [core]
     editor = nvim
