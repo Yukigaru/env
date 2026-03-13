@@ -125,8 +125,8 @@ bindkey "^[OQ" cdparent # F2
 #
 export PATH=~/.local/bin:${PATH}
 
-source ~/.localvars
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f ~/.localvars ]] && source ~/.localvars
+[[ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # load a zsh script specific to the hostname
 if [[ -f "$HOME/env/$(hostname -s).zsh" ]]; then
@@ -136,7 +136,7 @@ fi
 # load every script in local folder
 mkdir -p ~/.zsh-local/
 
-for config_file in ~/.zsh-local/*; do
+for config_file in ~/.zsh-local/*(N); do
     echo "loading ${config_file}"
     source ${config_file}
 done
