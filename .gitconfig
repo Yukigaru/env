@@ -47,7 +47,7 @@
     excludesfile = ~/.gitignore_global
 
 [submodule]
-	recurse = true
+    recurse = true
 
 [color]
     ui = true
@@ -56,6 +56,6 @@
     default = simple
 
 [safe]
-	directory = /home/agarustovich/.vim/bundle/coc.nvim
+    directory = ~/.vim/bundle/coc.nvim
 [init]
-	defaultBranch = main
+    defaultBranch = main
