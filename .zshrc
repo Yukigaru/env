@@ -140,3 +140,13 @@ for config_file in ~/.zsh-local/*; do
     echo "loading ${config_file}"
     source ${config_file}
 done
+
+alias cld="claude --dangerously-skip-permissions"
+
+# ctrl+H for claude
+function _launch_claude() {
+  BUFFER="claude --dangerously-skip-permissions"
+  zle accept-line
+}
+zle -N _launch_claude
+bindkey '^H' _launch_claude
