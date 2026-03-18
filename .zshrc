@@ -87,11 +87,10 @@ alias gfix='git add -u && git commit --fixup HEAD && GIT_SEQUENCE_EDITOR=true gi
 alias cont='--continue'
 
 echo "Remember aliases:"
-echo "jc - journalctl, sc - systemctl, c - cd, v - vim, mkcd, r - ranger"
+echo "jc - journalctl, sc - systemctl, c - cd, mkcd, r - ranger"
 echo "F2 - jump to a parent dir, Alt+D - delete until end of the line"
-echo "g au - git add -u, g sta - git stash apply, g ds - diff --staged"
+echo "g sta - git stash apply"
 echo "la - top N last modified files, sorted"
-echo "i3: mod+shift+S - screenshot with flameshot"
 
 # Alt+Backspace
 backward-kill-dir () {
