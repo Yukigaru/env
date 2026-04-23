@@ -59,3 +59,5 @@
     directory = ~/.vim/bundle/coc.nvim
 [init]
     defaultBranch = main
+[credential]
+	helper = --show-origin
