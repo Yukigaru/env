@@ -124,17 +124,25 @@ bindkey "^[OQ" cdparent # F2
 #
 export PATH=~/.local/bin:${PATH}
 
-[[ -f ~/.localvars ]] && source ~/.localvars
-[[ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source $1 if it exists, otherwise print an info note (non-fatal)
+src_or_note() {
+    if [[ -f "$1" ]]; then
+        source "$1"
+    else
+        print -P "%F{yellow}- ${1/#$HOME/~} not present%f"
+    fi
+}
+
+src_or_note ~/.localvars
+src_or_note ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # load a zsh script specific to the hostname
 if [[ -f "$HOME/env/$(hostname -s).zsh" ]]; then
     source "$HOME/env/$(hostname -s).zsh"
 fi
 
-# load every script in local folder
+# load every script in local folder (silent if dir is empty / missing)
 mkdir -p ~/.zsh-local/
-
 for config_file in ~/.zsh-local/*(N); do
     echo "loading ${config_file}"
     source ${config_file}
