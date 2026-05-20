@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# usage: fzf-source files|dirs
+# emits paths under cwd (depth 6), pruning dir names listed in ~/.fzfignore.
+# ~/.fzfignore: one dir name per line; blank lines and `#` comments ignored.
+set -u
+mode="${1:?usage: fzf-source files|dirs}"
+ignore="${HOME}/.fzfignore"
+
+prune_expr=()
+if [[ -f $ignore ]]; then
+  while IFS= read -r line; do
+    [[ -z $line || $line == \#* ]] && continue
+    [[ ${#prune_expr[@]} -gt 0 ]] && prune_expr+=(-o)
+    prune_expr+=(-name "$line")
+  done < "$ignore"
+fi
+
+case $mode in
+  files) type_args=(\( -type f -o -type l \)) ;;
+  dirs)  type_args=(-type d) ;;
+  *) echo "usage: fzf-source files|dirs" >&2; exit 1 ;;
+esac
+
+if (( ${#prune_expr[@]} )); then
+  find . -maxdepth 6 \( -type d \( "${prune_expr[@]}" \) \) -prune -o "${type_args[@]}" -print 2>/dev/null
+else
+  find . -maxdepth 6 "${type_args[@]}" -print 2>/dev/null
+fi

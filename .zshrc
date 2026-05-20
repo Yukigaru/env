@@ -91,6 +91,7 @@ echo "jc - journalctl, sc - systemctl, c - cd, mkcd, r - ranger"
 echo "F2 - jump to a parent dir, Alt+D - delete until end of the line"
 echo "g sta - git stash apply"
 echo "la - top N last modified files, sorted"
+echo "fzf: Ctrl-R history, Ctrl-T files, Alt-C cd, ** <Tab> arg completion"
 
 # Alt+Backspace
 backward-kill-dir () {
@@ -149,6 +150,13 @@ for config_file in ~/.zsh-local/*(N); do
 done
 
 alias cld="claude --dangerously-skip-permissions"
+
+# fzf: Ctrl-R history, Ctrl-T file picker, Alt-C cd, ** completion trigger
+export FZF_DEFAULT_OPTS='--height=40% --reverse --border'
+# fzf sources: depth 6, prune dir names listed in ~/.fzfignore (see ~/.local/bin/fzf-source)
+export FZF_CTRL_T_COMMAND='fzf-source files'
+export FZF_ALT_C_COMMAND='fzf-source dirs'
+eval "$(fzf --zsh)"
 
 # ctrl+H for claude
 function _launch_claude() {
