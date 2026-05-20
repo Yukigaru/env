@@ -1,0 +1,8 @@
+# dir names pruned by fzf-source (matched anywhere in the tree)
+.git
+node_modules
+target
+Library
+.cargo
+.gradle
+.cache

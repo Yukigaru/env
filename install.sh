@@ -24,6 +24,13 @@ ln -f -s ~/env/.tmux.conf ~/.tmux.conf
 mv ~/.profile ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s ~/env/.profile ~/.profile
 
+mv ~/.fzfignore ${BACKUP_DIR} 2>/dev/null || true
+ln -f -s ~/env/.fzfignore ~/.fzfignore
+
+mkdir -p ~/.local/bin
+mv ~/.local/bin/fzf-source ${BACKUP_DIR} 2>/dev/null || true
+ln -f -s ~/env/bin/fzf-source ~/.local/bin/fzf-source
+
 mkdir -p ~/.config/htop
 mv ~/.config/htop/htoprc ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s ~/env/.config/htoprc ~/.config/htop/htoprc
