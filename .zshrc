@@ -73,7 +73,7 @@ alias l="ll"
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias r="ranger"
 alias setclip="xclip -selection c" # using: echo "abc" | setclip
-alias open="xdg-open"
+[[ "$OSTYPE" != darwin* ]] && alias open="xdg-open"
 alias sc="systemctl"
 alias jc="journalctl"
 alias sudo='sudo ' # so that all aliases above also expanded via `sudo cmd`
