@@ -1,3 +1,6 @@
+# show host rules (if any) early — must appear above local greetings
+[[ -f ~/RULES.md ]] && cat ~/RULES.md
+
 HISTFILE=~/.histfile
 HISTSIZE=60000
 SAVEHIST=60000
