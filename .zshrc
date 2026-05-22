@@ -140,6 +140,14 @@ src_or_note() {
 src_or_note ~/.localvars
 src_or_note ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# tmux sessions, if any
+_tmux_ls=$(tmux ls 2>/dev/null)
+if [[ -n "$_tmux_ls" ]]; then
+    echo "tmux sessions:"
+    echo "$_tmux_ls" | sed 's/^/  /'
+fi
+unset _tmux_ls
+
 # load a zsh script specific to the hostname
 if [[ -f "$HOME/env/$(hostname -s).zsh" ]]; then
     source "$HOME/env/$(hostname -s).zsh"
