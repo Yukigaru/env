@@ -128,6 +128,16 @@ bindkey "^[OQ" cdparent # F2
 #
 export PATH=~/.local/bin:${PATH}
 
+# ssh: downgrade TERM=xterm-ghostty -> xterm-256color so remote hosts that
+# lack ghostty terminfo render bashrc colored prompt, vim, less/systemctl correctly.
+ssh() {
+    if [[ "$TERM" == xterm-ghostty ]]; then
+        TERM=xterm-256color command ssh "$@"
+    else
+        command ssh "$@"
+    fi
+}
+
 # source $1 if it exists, otherwise print an info note (non-fatal)
 src_or_note() {
     if [[ -f "$1" ]]; then
