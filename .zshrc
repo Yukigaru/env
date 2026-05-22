@@ -133,7 +133,7 @@ src_or_note() {
     if [[ -f "$1" ]]; then
         source "$1"
     else
-        print -P "%F{yellow}- ${1/#$HOME/~} not present%f"
+        print -P "%F{240}- ${1/#$HOME/~} not present%f"
     fi
 }
 
