@@ -33,7 +33,7 @@ ln -f -s ~/env/bin/fzf-source ~/.local/bin/fzf-source
 
 mkdir -p ~/.config/htop
 mv ~/.config/htop/htoprc ${BACKUP_DIR} 2>/dev/null || true
-ln -f -s ~/env/.config/htoprc ~/.config/htop/htoprc
+ln -f -s ~/env/.config/htop/htoprc ~/.config/htop/htoprc
 
 mkdir -p ~/.config/i3
 mv ~/.config/i3/config ${BACKUP_DIR} 2>/dev/null || true
