@@ -3,9 +3,6 @@ BACKUP_DIR="./backup `date +"%Y-%m-%d %H-%M-%S"`"
 mkdir -p "${BACKUP_DIR}"
 touch ~/.localvars
 
-mv ~/.bash_aliases ${BACKUP_DIR} 2>/dev/null || true
-ln -f -s ~/env/.bash_aliases ~/.bash_aliases
-
 mv ~/.zshrc ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s ~/env/.zshrc ~/.zshrc
 
@@ -20,9 +17,6 @@ ln -f -s ~/env/.gdbinit ~/.gdbinit
 
 mv ~/.tmux.conf ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s ~/env/.tmux.conf ~/.tmux.conf
-
-mv ~/.profile ${BACKUP_DIR} 2>/dev/null || true
-ln -f -s ~/env/.profile ~/.profile
 
 mv ~/.fzfignore ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s ~/env/.fzfignore ~/.fzfignore
