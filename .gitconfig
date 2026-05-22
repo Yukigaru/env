@@ -55,8 +55,6 @@
 [push]
     default = simple
 
-[safe]
-    directory = ~/.vim/bundle/coc.nvim
 [init]
     defaultBranch = main
 [credential]
