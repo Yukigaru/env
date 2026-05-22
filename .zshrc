@@ -5,6 +5,9 @@ HISTFILE=~/.histfile
 HISTSIZE=60000
 SAVEHIST=60000
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 setopt notify
 setopt autocd
 setopt extendedglob
