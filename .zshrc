@@ -91,7 +91,7 @@ alias cont='--continue'
 
 echo "Remember aliases:"
 echo "jc - journalctl, sc - systemctl, c - cd, mkcd, r - ranger"
-echo "F2 - jump to a parent dir, Alt+D - delete until end of the line"
+[[ "$OSTYPE" != darwin* ]] && echo "F2 - jump to a parent dir, Alt+D - delete until end of the line"
 echo "g sta - git stash apply"
 echo "la - top N last modified files, sorted"
 echo "fzf: Ctrl-R history, Ctrl-T files, Alt-C cd, ** <Tab> arg completion"
