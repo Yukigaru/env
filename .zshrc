@@ -168,7 +168,9 @@ alias cld="CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 claude --dangerously-skip-
 export FZF_DEFAULT_OPTS='--height=40% --reverse --border'
 # fzf sources: depth 6, prune dir names listed in ~/.fzfignore (see ~/.local/bin/fzf-source)
 export FZF_CTRL_T_COMMAND='fzf-source files'
+export FZF_CTRL_T_OPTS="--preview 'head -n 200 {} 2>/dev/null' --preview-window=right:60%:wrap"
 export FZF_ALT_C_COMMAND='fzf-source dirs'
+export FZF_ALT_C_OPTS="--preview 'ls -la {} 2>/dev/null | head -n 200'"
 eval "$(fzf --zsh)"
 
 # ctrl+H for claude
