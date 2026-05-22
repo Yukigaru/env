@@ -160,7 +160,9 @@ for config_file in ~/.zsh-local/*(N); do
     source ${config_file}
 done
 
-alias cld="claude --dangerously-skip-permissions"
+# Disable non-essential outbound traffic: auto-update checks, error reporting,
+# telemetry, feedback/survey prompts. Core model API calls are unaffected.
+alias cld="CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 claude --dangerously-skip-permissions"
 
 # fzf: Ctrl-R history, Ctrl-T file picker, Alt-C cd, ** completion trigger
 export FZF_DEFAULT_OPTS='--height=40% --reverse --border'
