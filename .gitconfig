@@ -41,6 +41,7 @@
 
 [merge]
     conflictstyle = zdiff3
+    ff = false
 
 [core]
     editor = nvim
@@ -57,5 +58,6 @@
 
 [init]
     defaultBranch = main
+
 [credential]
-	helper = --show-origin
+    helper = --show-origin
