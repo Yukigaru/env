@@ -29,6 +29,10 @@ mkdir -p ~/.config/htop
 mv ~/.config/htop/htoprc ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s ~/env/.config/htop/htoprc ~/.config/htop/htoprc
 
+mkdir -p ~/.config/ghostty
+mv ~/.config/ghostty/config ${BACKUP_DIR} 2>/dev/null || true
+ln -f -s ~/env/.config/ghostty/config ~/.config/ghostty/config
+
 mkdir -p ~/.config/i3
 mv ~/.config/i3/config ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s ~/env/.config/i3/config ~/.config/i3/config

@@ -1,0 +1,9 @@
+window-save-state = always
+macos-option-as-alt = true
+background = #20242a
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
