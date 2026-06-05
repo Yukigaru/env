@@ -1,0 +1,28 @@
+// Zed settings
+// https://zed.dev/docs/configuring-zed
+//
+// To see Zed's default settings: `zed: open default settings`
+{
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "auto_update": false,
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+}

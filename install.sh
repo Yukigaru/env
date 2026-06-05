@@ -57,6 +57,10 @@ if [[ "$OSTYPE" == darwin* ]]; then
     ln -f -s "$HOME/env/Library/Application Support/Cursor/User/settings.json" "$HOME/Library/Application Support/Cursor/User/settings.json"
     mv "$HOME/Library/Application Support/Cursor/User/keybindings.json" "${BACKUP_DIR}" 2>/dev/null || true
     ln -f -s "$HOME/env/Library/Application Support/Cursor/User/keybindings.json" "$HOME/Library/Application Support/Cursor/User/keybindings.json"
+
+    mkdir -p "$HOME/.config/zed"
+    mv "$HOME/.config/zed/settings.json" "${BACKUP_DIR}" 2>/dev/null || true
+    ln -f -s "$HOME/env/.config/zed/settings.json" "$HOME/.config/zed/settings.json"
 fi
 
 mkdir -p ~/.config/ranger
