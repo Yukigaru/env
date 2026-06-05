@@ -1,0 +1,18 @@
+{
+    "files.autoSave": "afterDelay",
+    "cmake.showOptionsMovedNotification": false,
+    "git.openRepositoryInParentFolders": "never",
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "explorer.confirmDelete": false,
+    "files.trimTrailingWhitespace": true,
+    "python.createEnvironment.trigger": "off",
+    "cursor.general.disableHttp2": true,
+    "cursor.composer.usageSummaryDisplay": "always",
+    "explorer.confirmDragAndDrop": false,
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "claudeCode.preferredLocation": "panel",
+    "window.autoDetectColorScheme": false
+}

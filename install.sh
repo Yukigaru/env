@@ -45,6 +45,20 @@ mkdir -p ~/.config/sublime-text-3/Packages/User
 mv ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s ~/env/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
+if [[ "$OSTYPE" == darwin* ]]; then
+    mkdir -p "$HOME/Library/Application Support/Code/User"
+    mv "$HOME/Library/Application Support/Code/User/settings.json" "${BACKUP_DIR}" 2>/dev/null || true
+    ln -f -s "$HOME/env/Library/Application Support/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+    mv "$HOME/Library/Application Support/Code/User/keybindings.json" "${BACKUP_DIR}" 2>/dev/null || true
+    ln -f -s "$HOME/env/Library/Application Support/Code/User/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+
+    mkdir -p "$HOME/Library/Application Support/Cursor/User"
+    mv "$HOME/Library/Application Support/Cursor/User/settings.json" "${BACKUP_DIR}" 2>/dev/null || true
+    ln -f -s "$HOME/env/Library/Application Support/Cursor/User/settings.json" "$HOME/Library/Application Support/Cursor/User/settings.json"
+    mv "$HOME/Library/Application Support/Cursor/User/keybindings.json" "${BACKUP_DIR}" 2>/dev/null || true
+    ln -f -s "$HOME/env/Library/Application Support/Cursor/User/keybindings.json" "$HOME/Library/Application Support/Cursor/User/keybindings.json"
+fi
+
 mkdir -p ~/.config/ranger
 mv ~/.config/i3/config ${BACKUP_DIR} 2>/dev/null || true
 ln -f -s ~/env/.config/ranger/rc.conf ~/.config/ranger/rc.conf
