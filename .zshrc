@@ -89,6 +89,7 @@ alias gp='g p'
 alias gch='g ch'
 alias gsh='g sh'
 alias grb='g rb'
+alias gwt='g wt'
 alias gfix='git add -u && git commit --fixup HEAD && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash HEAD~~'
 alias cont='--continue'
 
