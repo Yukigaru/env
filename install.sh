@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+
+if (( EUID == 0 )); then
+    echo "Do not run this script as root or with sudo. Run it as your normal user." >&2
+    exit 1
+fi
+
 BACKUP_DIR="./backup `date +"%Y-%m-%d %H-%M-%S"`"
 mkdir -p "${BACKUP_DIR}"
 touch ~/.localvars
